@@ -22,15 +22,15 @@ $ pip install -r requirements.txt
 Navigate to the llm-web-ui directory, initialize and run the app:
 
 ```
-$ cd portfolio
+$ cd My-Portfolio
 $ reflex init
 $ reflex run
 ```
 
 # Features
-- 100% Python-based, including the UI, using Reflex
+- 100% Python-based, All the UI, no HTML, CSS or JavaScript knowledge, using Reflex
 - The application is fully customizable and no knowledge of web dev is required to use it.
-    - See https://reflex.dev/docs/styling/overview for more details
+    - See https://reflex.dev/docs/getting-started/introduction/ for more details
 - Responsive design for various devices
 
 # Contributing
