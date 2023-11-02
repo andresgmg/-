@@ -12,7 +12,7 @@ export const initialEvents = () => [
     Event('state.hydrate', hydrateClientStorage(clientStorage)),
 ]
 
-export const isDevMode = true
+export const isDevMode = false
 
 export function EventLoopProvider({ children }) {
   const [state, addEvents, connectError] = useEventLoop(
