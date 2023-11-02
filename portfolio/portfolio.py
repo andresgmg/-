@@ -58,6 +58,27 @@ def get_social_media_button(img_src: str, url_href: str, tooltip_text: str):
     )
 
 
+def get_link_text(url_href: str, url_text: str):
+    return rx.link(
+        rx.text(
+            url_text,
+            font_weight="300",
+            font_size="14px",
+            font_family="DM Sans",
+            text_align="center",
+            width="100%",
+            color="rgb(255,255,255)",
+            padding_botton="5px",
+        ),
+        href=url_href,
+        is_external=True,
+        _hover={
+            "cursor": "pointer",
+            "transform": "scale(1.05)",
+        },
+    )
+
+
 @rx.page(
     title="Andres Marquez",
     description="My portfolio built with Reflex",
@@ -147,10 +168,31 @@ def index() -> rx.Component:
                         ),
                         spacing="1.5em",
                     ),
+                    rx.hstack(
+                        rx.text(
+                            "pagina hecha con tecnologia ",
+                            font_family="DM Sans",
+                            font_weight="300",
+                            font_size="14px",
+                            color="rgb(255,255,255)",
+                        ),
+                        get_link_text("https://reflex.dev/", "Reflex Framework"),
+                        rx.text(
+                            " en python - Mira aqui el ",
+                            font_family="DM Sans",
+                            font_weight="300",
+                            font_size="14px",
+                            color="rgb(255,255,255)",
+                        ),
+                        get_link_text(
+                            "https://github.com/andresgmg/andresgmg.github.io",
+                            "Source Code",
+                        ),
+                    ),
                     spacing="0.9em",
                 ),
             ),
-            padding_top="36px",
+            padding_top="24px",
             width="100vw",
         ),
         bg="linear-gradient(160deg, rgb(109, 220, 225), rgb(83, 90, 229))",
