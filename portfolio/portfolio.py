@@ -1,10 +1,4 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-from rxconfig import config
-
 import reflex as rx
-
-docs_url = "https://reflex.dev/docs/getting-started/introduction"
-filename = f"{config.app_name}/{config.app_name}.py"
 
 
 class State(rx.State):
@@ -26,7 +20,7 @@ def get_button(button_text: str, img_src: str, url_href: str):
                 width="calc(100% - 80px)",
                 color="#57618A",
             ),
-            padding="9ox 7px",
+            padding="9px 7px",
             width="95vw",
             max_width="700px",
             border="1px solid rgb(128,160,201)",
@@ -45,6 +39,30 @@ def get_button(button_text: str, img_src: str, url_href: str):
     )
 
 
+def get_social_media_button(img_src: str, url_href: str, tooltip_text: str):
+    return rx.tooltip(
+        rx.link(
+            rx.image(
+                src=img_src,
+                width="48px",
+                _hover={
+                    "cursor": "pointer",
+                    "transform": "scale(1.1)",
+                },
+            ),
+            href=url_href,
+            is_external=True,
+            _hover={},
+        ),
+        label=tooltip_text,
+    )
+
+
+@rx.page(
+    title="Andres Marquez",
+    description="My portfolio built with Reflex",
+    image="/portfolio.png",
+)
 def index() -> rx.Component:
     return rx.box(
         rx.center(
@@ -82,14 +100,52 @@ def index() -> rx.Component:
                 ),
                 rx.vstack(
                     get_button(
-                        "Download my CV - Spanish",
-                        "google-drive.png",
-                        "https://www.google.com/",
+                        "Visit my Linkedin - Visita mi Linkedin",
+                        "linkedin.png",
+                        "https://www.linkedin.com/in/andresgmg/",
                     ),
                     get_button(
-                        "Download my CV - English",
+                        "Visit my Github - Visita mi Github",
+                        "github.png",
+                        "https://github.com/andresgmg/",
+                    ),
+                    get_button(
+                        "Visit my Webpage & Portfolio - Visita mi pagina web y portafolio",
+                        "portfolio.png",
+                        "https://www.facelad.com/",
+                    ),
+                    get_button(
+                        "Download my CV in Spanish - Descarga mi CV en Español",
                         "google-drive.png",
-                        "https://www.google.com/",
+                        "https://drive.google.com/file/d/1TtFWpmas_-TVenOlimbaGqxwC11BCnry/view?usp=sharing",
+                    ),
+                    get_button(
+                        "Download my CV in English - Descarga mi CV en Ingles",
+                        "google-drive.png",
+                        "https://drive.google.com/file/d/1HRv1SahcV94pUdS2buuAhcksZz9pJmni/view?usp=sharing",
+                    ),
+                    rx.hstack(
+                        get_social_media_button(
+                            "gmail.png",
+                            "mailto:andres.gmg1997@gmail.com",
+                            "My Email - Mi Correo",
+                        ),
+                        get_social_media_button(
+                            "whatsapp.png",
+                            "https://api.whatsapp.com/send/?phone=56991279911",
+                            "My WhatsApp - Mi WhatsApp",
+                        ),
+                        get_social_media_button(
+                            "instagram.png",
+                            "https://www.instagram.com/andres.gmg/",
+                            "My Instagram - Mi Instagram",
+                        ),
+                        get_social_media_button(
+                            "telegram.png",
+                            "https://t.me/CriptoAmerica",
+                            "My Telegram - Mi telegram",
+                        ),
+                        spacing="1.5em",
                     ),
                     spacing="0.9em",
                 ),
