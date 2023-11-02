@@ -184,6 +184,8 @@
 
 .venv
 
+.web
+
 .webassets-cache
 
 /site
