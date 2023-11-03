@@ -44,3 +44,6 @@ If you'd like to contribute, please do the following:
 The following repo is licensed under the MIT License.
 
 Made by Andres Marquez - [My Github](https://github.com/andresgmg "My Github")
+
+# Example
+![example](assets/example.png)
