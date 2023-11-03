@@ -13,14 +13,14 @@ def get_button(button_text: str, img_src: str, url_href: str):
             rx.image(src=img_src, width="30px"),
             rx.text(
                 button_text,
-                font_size="20px",
-                font_weight="500",
+                font_size="16px",
+                font_weight="400",
                 font_family="DM Sans",
                 text_align="center",
                 width="calc(100% - 80px)",
                 color="#57618A",
             ),
-            padding="9px 7px",
+            padding="5px 5px",
             width="95vw",
             max_width="700px",
             border="1px solid rgb(128,160,201)",
@@ -121,19 +121,24 @@ def index() -> rx.Component:
                 ),
                 rx.vstack(
                     get_button(
-                        "Visit my Linkedin - Visita mi Linkedin",
+                        "My Linkedin - Mi Linkedin",
                         "linkedin.png",
                         "https://www.linkedin.com/in/andresgmg/",
                     ),
                     get_button(
-                        "Visit my Github - Visita mi Github",
+                        "My Github - Mi Github",
                         "github.png",
                         "https://github.com/andresgmg/",
                     ),
                     get_button(
-                        "Visit my Webpage & Portfolio - Visita mi pagina web y portafolio",
+                        "My Webpage & Portfolio - Mi pagina web y portafolio",
                         "portfolio.png",
                         "https://www.facelad.com/",
+                    ),
+                    get_button(
+                        "My stack of technologies - Mi lista de tecnologías",
+                        "code.png",
+                        "https://andresgmg.github.io/andresgmg/",
                     ),
                     get_button(
                         "Download my CV in Spanish - Descarga mi CV en Español",
