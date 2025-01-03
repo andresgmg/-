@@ -1,49 +1,54 @@
-# Reflex Linktree Clone
-A user-friendly, highly customizable Python web app designed to clonated Linktree format.
+# Astro Starter Kit: Basics
 
-# Getting Started
-
-### 🧬 1. Clone the Repo
-
-```
-$ git clone https://github.com/andresgmg/andresgmg.github.io.git
-```
-### 📦 2. Install Reflex
-To get started with Reflex, you'll need:
-
-- Python in [version.txt](version.txt "Python -V")
-- (No JavaScript knowledge required!)
-- Install Reflex using pip:
-
-```
-$ pip install -r requirements.txt
-```
-### 🚀 3. Run the application
-Navigate to the llm-web-ui directory, initialize and run the app:
-
-```
-$ cd My-Portfolio
-$ reflex init
-$ reflex run
+```sh
+npm create astro@latest -- --template basics
 ```
 
-# Features
-- 100% Python-based, All the UI, no HTML, CSS or JavaScript knowledge, using Reflex
-- The application is fully customizable and no knowledge of web dev is required to use it.
-    - See https://reflex.dev/docs/getting-started/introduction/ for more details
-- Responsive design for various devices
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-# Contributing
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-We welcome contributions to improve and extend the Web UI.
-If you'd like to contribute, please do the following:
-- Fork the repository and make your changes.
-- Once you're ready, submit a pull request for review.
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-# License
-The following repo is licensed under the MIT License.
+## 🚀 Project Structure
 
-Made by Andres Marquez - [My Github](https://github.com/andresgmg "My Github")
+Inside of your Astro project, you'll see the following folders and files:
 
-# Example
-![example](assets/example.png)
+```text
+/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
